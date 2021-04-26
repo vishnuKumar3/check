@@ -16,7 +16,7 @@ $message=$_POST['message'];
 $header="From:noreply@.com";
 $to="narayanavishnukumar@gmail.com";
 echo "Details:$name $email $subject $message <br>";
-$result=mail($to,$subject,$message,$header);
+$result=mail("narayanavishnukumar@gmail.com","hii","testing php mail");
 echo $result;
 if($result){
 echo "mail sent successfully";
