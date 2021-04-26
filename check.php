@@ -1,10 +1,10 @@
 <!doctype html>
 <form method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>">
-Name:<input type="text" name="name" required />
-Email:<input type="email" name="email" required />
-Subject:<input type="text" name="subject" required />
-Message:<input type="text" name="message" required />
-<input type="submit" value="submit"/>
+Name:<input type="text" name="name" required /><br>
+Email:<input type="email" name="email" required /><br>
+Subject:<input type="text" name="subject" required /><br>
+Message:<input type="text" name="message" required /><br>
+<input type="submit" value="submit"/><br>
 </form>
 
 <?php
@@ -13,10 +13,11 @@ $name=$_POST['name'];
 $email=$_POST['email'];
 $subject=$_POST['subject'];
 $message=$_POST['message'];
-$header="From:$name $email";
+$header="From:noreply@.com";
 $to="narayanavishnukumar@gmail.com";
-echo "Details:$name $email $subject $message";
-if(mail($to,$subject,$message,$header)){
+echo "Details:$name $email $subject $message <br>";
+$result=mail($to,$subject,$message,$header);
+if($result==true){
 echo "mail sent successfully";
 }
 else{
