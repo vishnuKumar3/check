@@ -9,16 +9,14 @@ Message:<input type="text" name="message" required /><br>
 
 <?php
 if($_SERVER["REQUEST_METHOD"]=="POST"){
-$name=$_POST['name'];
-$email=$_POST['email'];
-$subject=$_POST['subject'];
-$message=$_POST['message'];
-$header="From:noreply@.com";
-$to="narayanavishnukumar@gmail.com";
-echo "Details:$name $email $subject $message <br>";
-$result=mail("narayanavishnukumar@gmail.com","hii","testing php mail");
-echo $result;
-if($result){
+$to = "narayanavishnukumar@gmail.com";
+$subject = "My subject";
+$txt = "Hello world!";
+$headers = "From: webmaster@example.com" . "\r\n" .
+"CC: somebodyelse@example.com";
+
+
+if(mail($to,$subject,$txt,$headers)){
 echo "mail sent successfully";
 }
 else{
