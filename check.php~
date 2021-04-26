@@ -17,7 +17,7 @@ $header="From:$name $email";
 $to="narayanavishnukumar@gmail.com";
 echo "Details:$name $email $subject $message";
 if(mail($to,$subject,$message,$header)){
-echo "mail sent successfully";
+echo "mail set successfully";
 }
 else{
 echo "mail not sent";
