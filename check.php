@@ -17,7 +17,8 @@ $header="From:noreply@.com";
 $to="narayanavishnukumar@gmail.com";
 echo "Details:$name $email $subject $message <br>";
 $result=mail($to,$subject,$message,$header);
-if($result==true){
+echo $result;
+if($result){
 echo "mail sent successfully";
 }
 else{
