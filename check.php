@@ -9,6 +9,7 @@ Message:<input type="text" name="message" required /><br>
 
 <?php
 if($_SERVER["REQUEST_METHOD"]=="POST"){
+ini_set("sendmail_from", "narayanavishnukumar@gmail.com");
 $to = "narayanavishnukumar@gmail.com";
 $subject = "My subject";
 $txt = "Hello world!";
