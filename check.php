@@ -12,11 +12,10 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
 $to = "narayanavishnukumar@gmail.com";
 $subject = "My subject";
 $txt = "Hello world!";
-$headers = "From: webmaster@example.com" . "\r\n" .
-"CC: somebodyelse@example.com";
+$headers = "From: webmaster@example.com\r\n";
 
 
-if(mail($to,$subject,$txt,$headers)){
+if(mail($to,$subject,$txt,$headers)==true){
 echo "mail sent successfully";
 }
 else{
