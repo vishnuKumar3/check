@@ -45,7 +45,7 @@ window.history.go(0);}
 </script>-->
 <script>
 function rightclick(){
-return false;
+return true;
 }
 document.oncontextmenu=rightclick;
 document.onselectstart=select;
