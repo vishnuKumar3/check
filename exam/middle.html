@@ -1,0 +1,21 @@
+<!doctype html>
+<h4>INSTRUCTIONS</h4>
+1.Donot try to click the top menu bar.If you click then your marks are zero
+<br>
+2.You must click Submit within the given time else your marks are zero
+<br>
+3.Click the below button to start exam
+<br>
+<br>
+<input type="submit" onclick="myfunction()" value="click"></input>
+<script>
+function rightclick(){
+return false;
+}
+document.oncontextmenu=rightclick;
+document.onselectstart=select;
+function select(){
+	return false;}
+function myfunction(){
+window.open("exampaper.php");}
+</script>
