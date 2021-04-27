@@ -9,6 +9,14 @@
 if($_SERVER["REQUEST_METHOD"]=="POST"){
 $user=$_POST['username'];
 $userPassword=$_POST['password'];
-echo "Details:$user $userPassword";
+$host="sql6.freemysqlhosting.net";
+$username="sql6408612";
+$password="w3Rvh3peL1";
+$database="sql6408612";
+$conn=new mysqli($host,$username,$password,$database);
+$stmt=$conn->prepare("insert into mytable values(?,?)");
+$stmt->bind_param("si",$user,$userPassword);
+$stmt->execute();
+$stmt->close();
 }
 ?>
