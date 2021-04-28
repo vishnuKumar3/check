@@ -33,16 +33,22 @@ font-family:newfont;
 
 <div class="box">
 <div class="login"><h1>Login</h1></div>
-<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST">
+<form id="form" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST">
 <h2>Username:
 <input type="text" id='username' name="user"  placeholder="username:" autofocus required style="width:300px;height:30px;margin-bottom:10px;"></h2>
 <h2>Password:
 <input type="password" id='password' name="pass"  placeholder="password:" required style="width:300px;height:30px;margin-bottom:10px;">
 </h2>
-<input style="margin-left:5%;" type="submit" value="submit" onsubmit></input>
+<input style="margin-left:5%;" type="submit" value="submit" onclick="myfunction()"></input>
 </form>
 </div>
 </body>
+<script>
+function myfunction(){
+sessionStorage.name=document.getElementById('username').value;
+document.getElementById("form").submit();
+}
+</script>
 <!--<script>
 function myfunction(){
 var username=document.getElementById('username').value;
