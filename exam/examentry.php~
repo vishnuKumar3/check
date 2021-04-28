@@ -79,7 +79,6 @@ $_SESSION['username1']=$user;
 //setcookie("Name",$user);
 //echo $_COOKIE["Name"];
 if(!empty($user) && !empty($pass)){
-	echo '<script>window.alert("Your exam is over");</script>';
 	$host="sql6.freemysqlhosting.net";
 	$username="sql6408612";
 	$password="w3Rvh3peL1";
@@ -89,6 +88,8 @@ if(!empty($user) && !empty($pass)){
 	$sql=$conn->query($select);
 	while($row=$sql->fetch_assoc()){
 		if($row['username']==$user && $row['password']==$pass){
+		echo "<script>window.alert('hii');document.getElementById('username').value=' ';
+			document.getElementById('password').value=' ';</script>";
 			header("Location:middle.html");
 			die("Login Successful");}}
 	
