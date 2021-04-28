@@ -211,7 +211,6 @@ function openFullscreen() {
 
 
 function closefunction(){
-alert("hii");
 document.getElementById("form").submit();}
 
 
