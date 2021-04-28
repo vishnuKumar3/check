@@ -7,12 +7,12 @@ h2{color:green;margin-left:10px;}
 img{float:left;width:80px;height:80px;}
 </style>
 <body >
-<hr>
+
 <img src="logo.png">
-<center style="font-size:25px;color:red;">Rajiv Gandhi University Of Knowledge Technologies</center>
+<center style="font-size:25px;color:red;">Calcite X</center>
 <br>
-<center style="font-size:25px;color:green;">catering to the Educational Needs of Gifted Rural Youth of A.P</center>
-<hr>
+<center style="font-size:25px;color:green;">Exam Section</center>
+
 <div class="box">
 <div class="login"><h1>Login</h1></div>
 <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST">
@@ -45,7 +45,7 @@ window.history.go(0);}
 </script>-->
 <script>
 function rightclick(){
-return true;
+return false;
 }
 document.oncontextmenu=rightclick;
 document.onselectstart=select;

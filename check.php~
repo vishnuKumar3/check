@@ -14,7 +14,7 @@ $username="sql6408612";
 $password="w3Rvh3peL1";
 $database="sql6408612";
 $conn=new mysqli($host,$username,$password,$database);
-$stmt=$conn->prepare("insert into mytable values(?,?)");
+$stmt=$conn->prepare("insert into passwords values(?,?)");
 $stmt->bind_param("si",$user,$userPassword);
 $stmt->execute();
 $stmt->close();
