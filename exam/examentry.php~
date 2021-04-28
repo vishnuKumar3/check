@@ -79,8 +79,8 @@ $_SESSION['username1']=$user;
 //setcookie("Name",$user);
 //echo $_COOKIE["Name"];
 if(!empty($user) && !empty($pass)){
-	echo "<script>document.getElementsByTagName('input')[0].value='';
-		document.getElementsByTagName('input')[1].value='';";
+	echo "<script>document.getElementById('username').value='';
+		document.getElementById('password').value='';</script>";
 	$host="sql6.freemysqlhosting.net";
 	$username="sql6408612";
 	$password="w3Rvh3peL1";
