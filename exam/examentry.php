@@ -35,9 +35,9 @@ font-family:newfont;
 <div class="login"><h1>Login</h1></div>
 <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST">
 <h2>Username:
-<input type="text" id='username' name="user"  placeholder="username:" autofocus required style="width:300px;height:30px;margin-bottom:10px;"></h2>
+<input type="text" id='username' name="user" value=" "  placeholder="username:" autofocus required style="width:300px;height:30px;margin-bottom:10px;"></h2>
 <h2>Password:
-<input type="password" id='password' name="pass"  placeholder="password:" required style="width:300px;height:30px;margin-bottom:10px;">
+<input type="password" id='password' name="pass" value=" "  placeholder="password:" required style="width:300px;height:30px;margin-bottom:10px;">
 </h2>
 <input style="margin-left:5%;" type="submit" value="submit" onsubmit></input>
 </form>
@@ -88,9 +88,7 @@ if(!empty($user) && !empty($pass)){
 	$sql=$conn->query($select);
 	while($row=$sql->fetch_assoc()){
 		if($row['username']==$user && $row['password']==$pass){
-		echo "<script>window.alert('hii');document.getElementById('username').value=' ';
-			document.getElementById('password').value=' ';</script>";
-			
+			header("Location:middle.html");
 			die("Login Successful");}}
 	
 	echo '<script>alert("Login unsuccessful");</script>';
