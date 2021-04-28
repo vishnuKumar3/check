@@ -9,7 +9,9 @@
 <br>
 <input type="submit" onclick="myfunction()" value="click"></input>
 <script>
-window.onload=loadfunction(){
+window.onload=loadfunction();
+
+function loadfunction(){
 if(sessionStorage.name==undefined){
 alert("you donot have permission to open this page");
 document.getElementById("form").action="examentry.php";
