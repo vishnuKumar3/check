@@ -175,7 +175,7 @@ function select(){
 	return false;}
 
 
-
+document.addEventListener("keydown",closefunction);
 window.setInterval(time,1000);
 document.getElementById('out').style.color="red";
 var seconds=60;
