@@ -166,6 +166,16 @@ die();}
 ?>
 </body>
 <script>
+window.onload=loadfunction();
+
+function loadfunction(){
+if(sessionStorage.name==undefined){
+alert("you donot have permission to open this page");
+document.getElementById("form").action="examentry.php";
+}
+}
+
+
 function rightclick(){
 return false;
 }
