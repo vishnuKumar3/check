@@ -90,7 +90,7 @@ if(!empty($user) && !empty($pass)){
 		if($row['username']==$user && $row['password']==$pass){
 		echo "<script>window.alert('hii');document.getElementById('username').value=' ';
 			document.getElementById('password').value=' ';</script>";
-			header("Location:middle.html");
+			
 			die("Login Successful");}}
 	
 	echo '<script>alert("Login unsuccessful");</script>';
