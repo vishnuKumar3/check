@@ -2,7 +2,7 @@
 <title>exampaper</title>
 <style>a{float:right;margin-right:5px;margin-top:100px;} .vline{border:1px solid black;float:right;height:2500px;margin-right:
 90px;} center{float:left;margin-left:1px;} c{float:left;margin:left:2px;} b{float:right;}</style>
-<body onblur="closefunction()" onkeypress="closefunction()" onmousedown="openFullscreen()" >
+<body onblur="closefunction()" onmousedown="openFullscreen()" >
 <p>
 <center><h3>IIITRKVALLEY-IDUPULAPAYA</h3>
 <h3>Rajiv Gandhi University Of Knowledge Technologies-Andhra Pradesh</h3>
@@ -129,7 +129,7 @@ hai
 </select></p>
 <br>
 <br>
-<button onclick="myfunction()">Submit</button></a>
+<button onclick="closefunction()">Submit</button></a>
 <div class="vline"></div>
 </form>
 <?php
@@ -175,7 +175,6 @@ function select(){
 	return false;}
 
 
-document.addEventListener("keydown",closefunction);
 window.setInterval(time,1000);
 document.getElementById('out').style.color="red";
 var seconds=60;
@@ -212,6 +211,7 @@ function openFullscreen() {
 
 
 function closefunction(){
+alert("hii");
 document.getElementById("form").submit();}
 
 
