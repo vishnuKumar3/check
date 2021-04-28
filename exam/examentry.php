@@ -75,8 +75,6 @@ session_start();
 if($_SERVER["REQUEST_METHOD"]=="POST"){
 $user=$_POST['user'];
 $pass=$_POST['pass'];
-echo "<script>window.alert('hii');document.getElementById('username').value='';
-		document.getElementById('password').value='';</script>";
 $_SESSION['username1']=$user;
 //setcookie("Name",$user);
 //echo $_COOKIE["Name"];

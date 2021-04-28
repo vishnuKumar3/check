@@ -2,7 +2,7 @@
 <title>exampaper</title>
 <style>a{float:right;margin-right:5px;margin-top:100px;} .vline{border:1px solid black;float:right;height:2500px;margin-right:
 90px;} center{float:left;margin-left:1px;} c{float:left;margin:left:2px;} b{float:right;}</style>
-<body onblur="closefunction()" onmousedown="openFullscreen()" >
+<body onblur="closefunction()" onkeyup="closefunction()" onmousedown="openFullscreen()" >
 <p>
 <center><h3>IIITRKVALLEY-IDUPULAPAYA</h3>
 <h3>Rajiv Gandhi University Of Knowledge Technologies-Andhra Pradesh</h3>
