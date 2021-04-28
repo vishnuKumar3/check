@@ -9,6 +9,13 @@
 <br>
 <input type="submit" onclick="myfunction()" value="click"></input>
 <script>
+window.onload=loadfunction(){
+if(sessionStorage.name==undefined){
+alert("you donot have permission to open this page");
+document.getElementById("form").action="examentry.php";
+}
+}
+
 function rightclick(){
 return false;
 }
