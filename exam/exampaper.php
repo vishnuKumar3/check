@@ -177,7 +177,7 @@ function select(){
 
 function keyfunction(event){
 if(event.key=="Escape"){
-closefunciton();
+window.alert(event.key);
 }
 closefunction();
 }
