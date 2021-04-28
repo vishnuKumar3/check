@@ -2,6 +2,7 @@
 <head>
 <title>Exam Portal</title>
 <link rel="icon" href="logo.jpeg"/>
+<meta name="viewport" content="width=device-width,intial-scale=1.0">
 <style>
 .box{margin-top:10%;margin-left:40%;width:402px;border-radius:10px;padding-bottom:20px;border:1px solid black;}
 .login{width:99.5%;height:50px;border:1px solid transparent;top:0;border-radius:10px;background-color:lime;padding-bottom:10px;} h1{color:blue;margin-left:5%;}
