@@ -176,7 +176,7 @@ function select(){
 
 document.addEventListener("keydown",function(event){
 if(event.key=="Escape"){
-closefunction();
+window.alert("hiii");
 }
 });
 window.setInterval(time,1000);
