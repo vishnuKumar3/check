@@ -46,7 +46,6 @@ font-family:newfont;
 <script>
 function myfunction(){
 sessionStorage.name=document.getElementById('username').value;
-alert("entered");
 document.getElementById("form").submit();
 }
 </script>
