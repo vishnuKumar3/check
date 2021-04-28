@@ -173,7 +173,6 @@ if(sessionStorage.name==undefined){
 alert("you donot have permission to open this page");
 document.getElementById("form").action="examentry.php";
 }
-alert(sessionStorage.name);
 }
 
 
