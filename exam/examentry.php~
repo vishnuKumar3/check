@@ -57,7 +57,7 @@ font-family:newfont;
 
 <button type="button" onclick="visibility()" style="border:none;background:transparent;"><img src="visible.svg" id="icon"/></button>
 </h2>
-<input style="margin-left:5%;" id="result" type="submit" value="submit" onclick="myfunction()"></input>
+<input style="margin-left:5%;" name="result" type="submit" value="submit" onclick="myfunction()"></input>
 </form>
 </div>
 </body>
