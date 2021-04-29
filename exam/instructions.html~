@@ -7,7 +7,7 @@
 </head>
 <h3 style="color:red;">INSTRUCTIONS</h3>
 <p>1.Donot try to click the top menu bar.If you click then your marks are zero</p>
-<p>2.You must click Submit within the given time else your marks are zero</p>
+<p>2.You must click Submit within the given time else your exam terminates</p>
 <p>3.Click the below button to start exam</p>
 <br>
 
@@ -23,7 +23,7 @@ alert("Login first and then write exam");
 }
 
 function rightclick(){
-return true;
+return false;
 }
 document.oncontextmenu=rightclick;
 document.onselectstart=select;

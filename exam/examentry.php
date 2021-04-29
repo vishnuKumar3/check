@@ -14,6 +14,7 @@ h2{color:green;margin-left:5%;}
 form input:nth-child(1),input:nth-child(2){border-width:0 0 2px 0;border-bottom-color:black;border-radius:5px;}
 form input:nth-child(1):focus,input:nth-child(2):focus{background:#eee;transition:all 2s;}
 form input:nth-child(3){padding:5px 20px 5px 20px;border:2px solid #aaa;border-radius:5px;box-shadow:1px 1px 1px black;}
+
 *{font-family:newfont;}
 @font-face{
 src:url("MavenPro-Regular.ttf");
@@ -49,11 +50,14 @@ font-family:newfont;
 <div class="login"><h1>Login</h1></div>
 <form id="form" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST">
 <h2>Username:
-<input type="text" id='username' name="user"  placeholder="username:" autofocus required style="width:300px;height:30px;margin-bottom:10px;"></h2>
+<br>
+<input type="text" id='username' name="user"  placeholder="username:" autofocus required style="width:80%;height:30px;margin-bottom:10px;"></h2>
 <h2>Password:
-<input type="password" id='password' name="pass"  placeholder="password:" required style="width:300px;height:30px;margin-bottom:10px;">
+<input type="password" id='password' name="pass"  placeholder="password:" required style="width:80%;height:30px;margin-bottom:30px;">
+
+<button type="button" onclick="visibility()" style="border:none;background:transparent;"><img src="visible.svg" id="icon"/></button>
 </h2>
-<input style="margin-left:5%;" type="submit" value="submit" onclick="myfunction()"></input>
+<input style="margin-left:5%;" id="result" type="submit" value="submit" onclick="myfunction()"></input>
 </form>
 </div>
 </body>
@@ -62,6 +66,23 @@ function myfunction(){
 sessionStorage.name=document.getElementById('username').value;
 document.getElementById("form").submit();
 }
+
+function visibility(){
+var type=document.getElementById("password").type;
+var ele=document.getElementById("password");
+var icon=document.getElementById("icon");
+if(type=="text"){ele.type="password";icon.src="visible.svg"}
+else{ele.type="text";icon.src="invisible.svg"};
+}
+
+
+function rightclick(){
+return false;
+}
+document.oncontextmenu=rightclick;
+document.onselectstart=select;
+function select(){
+	return false;}
 </script>
 <!--<script>
 function myfunction(){
@@ -81,18 +102,10 @@ alert("you enter wrong username or password");}}
 else{alert("please fill this field");}
 window.history.go(0);}
 </script>-->
-<script>
-function rightclick(){
-return false;
-}
-document.oncontextmenu=rightclick;
-document.onselectstart=select;
-function select(){
-	return false;}
-</script>
+
 <?php
 session_start();
-if($_SERVER["REQUEST_METHOD"]=="POST"){
+if($_SERVER["REQUEST_METHOD"]=="POST" && isset($_POST['result'])){
 $user=$_POST['user'];
 $pass=$_POST['pass'];
 $_SESSION['username1']=$user;
