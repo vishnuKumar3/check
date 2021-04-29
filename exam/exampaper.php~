@@ -1,5 +1,6 @@
 <!doctype html>
-<title>exampaper</title>
+<title>MainExam</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
 <style>a{float:right;margin-right:5px;margin-top:100px;} .vline{border:1px solid black;float:right;height:2500px;margin-right:
 90px;} center{float:left;margin-left:1px;} c{float:left;margin:left:2px;} b{float:right;}</style>
 <body onblur="closefunction()" onmousedown="openFullscreen()" >

@@ -1,11 +1,14 @@
 <!doctype html>
-<h4>INSTRUCTIONS</h4>
-1.Donot try to click the top menu bar.If you click then your marks are zero
-<br>
-2.You must click Submit within the given time else your marks are zero
-<br>
-3.Click the below button to start exam
-<br>
+<head>
+<title>Instructions</title>
+<link rel="icon" href="logo.jpeg"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<style>p{word-spacing:3px;}</style>
+</head>
+<h3 style="color:red;">INSTRUCTIONS</h3>
+<p>1.Donot try to click the top menu bar.If you click then your marks are zero</p>
+<p>2.You must click Submit within the given time else your marks are zero</p>
+<p>3.Click the below button to start exam</p>
 <br>
 
 <input type="submit" onclick="myfunction()" value="click"></input>
@@ -20,7 +23,7 @@ alert("Login first and then write exam");
 }
 
 function rightclick(){
-return false;
+return true;
 }
 document.oncontextmenu=rightclick;
 document.onselectstart=select;
