@@ -1,10 +1,23 @@
 <!doctype html>
+<head>
 <title>MainExam</title>
-<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<style>a{float:right;margin-right:5px;margin-top:100px;} .vline{border:1px solid black;float:right;height:2500px;margin-right:
-90px;} center{float:left;margin-left:1px;} c{float:left;margin:left:2px;} b{float:right;}</style>
+<style>
+.select{margin-right:5px;margin-top:100px;} 
+.vline{border:1px solid black;height:1500px;} 
+.exam_box{width:60%;}
+.second_box{width:15%;}
+img{width:100%;}
+.exam{display:flex;flex-direction:row;justify-content:space-between;}
+form{margin-right:5%;width:100%;}
+@media (max-width:1000px){
+h3{font-size:30px;}
+img{width:100%;}
+.exam_box{width:70%;}
+}
+</style>
+</head>
 <body onblur="closefunction()" onmousedown="openFullscreen()" >
-<p>
+<div>
 <center><h3>IIITRKVALLEY-IDUPULAPAYA</h3>
 <h3>Rajiv Gandhi University Of Knowledge Technologies-Andhra Pradesh</h3>
 <h3>Academic Year2019-2020:Semester-1</h3>
@@ -12,24 +25,29 @@
 <h3>Computer Science Engineering</h3>
 <h3>CCXY208:Chemistry</h3>
 <h3>R17BATCH</h3>
-<h3 style="float:left;">Time:45Minutes</h3>
-<h3 style="float:right;">MAXMARKS:10</h3><br><br><br><hr style="width:1050px;">
-<c>
-hello<br>
-hai
-
-<img  style="float:left;" src="1_P2.Q.png"></img><br>
-<img  style="float:left;" src="8_P2.Q.png"></img><br>
-<img  style="float:left;" src="2_P1.Q.png"></img><br>
-<img style="float:left;" src="2_P2.Q.png"></img><br>
-<img style="float:left;" src="2_P3.Q.png"></img><br>
-<img style="float:left;" src="3_P1.Q.png"></img><br>
-<img style="float:left;" src="3_P2.Q.png"></img><br>
-<img style="float:left;" src="4_P1.Q.png"></img><br>
-<img style="float:left;" src="4_P2.Q.png"></img><br></c></center>
+<h3 style="float:left;">TIME:45Minutes</h3>
+<h3 style="float:right;">MAXMARKS:10</h3>
+<br><br><br>
+<hr style="width:100%;"/>
+</center>
+</div>
+<div class="exam">
+<div class="exam_box">
+<img  src="1_P2.Q.png"></img><br>
+<img  src="8_P2.Q.png"></img><br>
+<img  src="2_P1.Q.png"></img><br>
+<img  src="2_P2.Q.png"></img><br>
+<img  src="2_P3.Q.png"></img><br>
+<img  src="3_P1.Q.png"></img><br>
+<img  src="3_P2.Q.png"></img><br>
+<img  src="4_P1.Q.png"></img><br>
+<img  src="4_P2.Q.png"></img><br>
+</div>
+<!--<div class="vline"></div>-->
+<div class="second_box">
 <form id="form" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST">
 <b id='out'></b>
-<a>
+<div class="select">
 1:
 <select id="1" name="1">
 <option value="">----</option>
@@ -130,9 +148,10 @@ hai
 </select></p>
 <br>
 <br>
-<button onclick="closefunction()">Submit</button></a>
-<div class="vline"></div>
+<button onclick="closefunction()">Submit</button></div>
 </form>
+</div>
+</div>
 <?php
 session_start();
 if($_SERVER["REQUEST_METHOD"]=="POST"){
@@ -162,7 +181,7 @@ $insert=$conn->prepare("INSERT INTO mytable values(?,?)");
 $insert->bind_param("si",$user,$total);
 $insert->execute();
 $insert->close();
-echo '<script>window.alert("Your exam is over");window.close();</script>';
+echo '<script>window.alert("Your exam is over");window.location.replace("/exam/examentry.php");</script>';
 die();}
 ?>
 </body>
