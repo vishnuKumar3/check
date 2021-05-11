@@ -1,138 +1,4 @@
 <!doctype html>
-<title>MainExam</title>
-<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<style>a{float:right;margin-right:5px;margin-top:100px;} .vline{border:1px solid black;float:right;height:2500px;margin-right:
-90px;} center{float:left;margin-left:1px;} c{float:left;margin:left:2px;} b{float:right;}</style>
-<body onblur="closefunction()" onmousedown="openFullscreen()" >
-<p>
-<center><h3>IIITRKVALLEY-IDUPULAPAYA</h3>
-<h3>Rajiv Gandhi University Of Knowledge Technologies-Andhra Pradesh</h3>
-<h3>Academic Year2019-2020:Semester-1</h3>
-<h3>WeeklyTest-1</h3>
-<h3>Computer Science Engineering</h3>
-<h3>CCXY208:Chemistry</h3>
-<h3>R17BATCH</h3>
-<h3 style="float:left;">Time:45Minutes</h3>
-<h3 style="float:right;">MAXMARKS:10</h3><br><br><br><hr style="width:1050px;">
-<c>
-hello<br>
-hai
-
-<img  style="float:left;" src="1_P2.Q.png"></img><br>
-<img  style="float:left;" src="8_P2.Q.png"></img><br>
-<img  style="float:left;" src="2_P1.Q.png"></img><br>
-<img style="float:left;" src="2_P2.Q.png"></img><br>
-<img style="float:left;" src="2_P3.Q.png"></img><br>
-<img style="float:left;" src="3_P1.Q.png"></img><br>
-<img style="float:left;" src="3_P2.Q.png"></img><br>
-<img style="float:left;" src="4_P1.Q.png"></img><br>
-<img style="float:left;" src="4_P2.Q.png"></img><br></c></center>
-<form id="form" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST">
-<b id='out'></b>
-<a>
-1:
-<select id="1" name="1">
-<option value="">----</option>
-<option value="a">a</option>
-<option value="b">b</option>
-<option value="c">c</option>
-<option value="d">d</option>
-</select>
-<br>
-<br>
-2:
-<select id="2" name="2">
-<option value="">----</option>
-<option value="a">a</option>
-<option value="b">b</option>
-<option value="c">c</option>
-<option value="d">d</option>
-</select>
-<br>
-<br>
-3:
-<select id="3" name="3">
-<option value="">----</option>
-<option value="a">a</option>
-<option value="b">b</option>
-<option value="c">c</option>
-<option value="d">d</option>
-</select>
-<br>
-<br>
-4:
-<select id="4" name="4">
-<option value="">----</option>
-<option value="a">a</option>
-<option value="b">b</option>
-<option value="c">c</option>
-<option value="d">d</option>
-</select>
-<br>
-<br>
-5:
-<select id="5" name="5">
-<option value="">----</option>
-<option value="a">a</option>
-<option value="b">b</option>
-<option value="c">c</option>
-<option value="d">d</option>
-</select>
-<br>
-<br>
-6:
-<select id="6" name="6">
-<option value="">----</option>
-<option value="a">a</option>
-<option value="b">b</option>
-<option value="c">c</option>
-<option value="d">d</option>
-</select>
-<br>
-<br>
-7:
-<select id="7" name="7">
-<option value="">----</option>
-<option value="a">a</option>
-<option value="b">b</option>
-<option value="c">c</option>
-<option value="d">d</option>
-</select>
-<br>
-<br>
-8:
-<select id="8" name="8">
-<option value="">----</option>
-<option value="a">a</option>
-<option value="b">b</option>
-<option value="c">c</option>
-<option value="d">d</option>
-</select>
-<br>
-<br>
-9:
-<select id="9" name="9">
-<option value="">----</option>
-<option value="a">a</option>
-<option value="b">b</option>
-<option value="c">c</option>
-<option value="d">d</option>
-</select>
-<br>
-<br>
-10:
-<select id="10" name="10">
-<option value="">----</option>
-<option value="a">a</option>
-<option value="b">b</option>
-<option value="c">c</option>
-<option value="d">d</option>
-</select></p>
-<br>
-<br>
-<button onclick="closefunction()">Submit</button></a>
-<div class="vline"></div>
-</form>
 <?php
 session_start();
 if($_SERVER["REQUEST_METHOD"]=="POST"){
@@ -149,33 +15,144 @@ $result[7]=$_POST['7'];
 $result[8]=$_POST['8'];
 $result[9]=$_POST['9'];
 $result[10]=$_POST['10'];
-$total=0;
+$total="";
 for($i=1;$i<=10;$i++){
-	if($answer[$i]==$result[$i]){
-		$total+=1;}}
+		$total=$total."-".$result[$i];}
 $host="sql6.freemysqlhosting.net";
 $username="sql6408612";
 $password="w3Rvh3peL1";
 $dbname="sql6408612";
 $conn=new mysqli($host,$username,$password,$dbname);
 $insert=$conn->prepare("INSERT INTO mytable values(?,?)");
-$insert->bind_param("si",$user,$total);
+$insert->bind_param("ss",$user,$total);
 $insert->execute();
 $insert->close();
-echo '<script>window.alert("Your exam is over");window.close();</script>';
+echo '<script>window.alert("Your exam is over");window.location.replace("/exam/examentry.php");</script>';
 die();}
 ?>
+<title>MainExam</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<link rel="icon" href="logo.jpeg"/>
+<style>
+.select{margin-right:5px;margin-top:100px;} 
+.vline{border:1px solid black;height:1500px;} 
+#group1{width:90%;}
+img{width:100%;}
+.exam{display:flex;flex-direction:row;justify-content:space-between;}
+form{margin-right:5%;width:100%;}
+#group1 p input,#group2 p input,#group3 p input{border:none;border-radius:5px;width:30%;height:30px;background:#ddd;transition:2s;}
+button{padding:5px 20px 5px 20px;border:2px solid #aaa;border-radius:5px;box-shadow:1px 1px 1px black;}
+#group1 p input:focus,#group2 p input:focus,#group3 p input:focus{border-bottom:1px solid black;background:#fff;transition:2s;}
+.navbar{display:flex;flex-direction:row;justify-content:space-between;align-items:start;}
+.navbar div p:nth-child(1){font-size:30px;color:white;text-shadow:1px 2px 2px black,3px 4px 5px darkblue;}
+.navbar div p:nth-child(2){font-style:italic;margin-top:-20px;}
+.navbar img{width:10%;height:100px;}
+
+@media (min-width:1500px){
+.navbar img{width:10%;height:200px;}
+}
+
+@media (max-width:1000px){
+#group1 p input,#group2 p input,#group3 p input{width:100%;}
+.navbar{display:flex;flex-direction:row;padding-bottom:10%;align-items:center;justify-content:start;}
+.navbar img{width:30%;height:100px;}
+.navbar .imgbox{margin-top:-10%;}
+.navbar div:nth-last-child(1){display:none;}
+}
+</style>
+
+<body onblur="closefunction()" onmousedown="openFullscreen()" >
+
+<div class="navbar">
+<img src="logo.jpeg">
+<div class="imgbox" style="text-align:center;">
+<p>Calcite X</p>
+<p>Shaping the Uncut</p>
+</div>
+<div></div>
+</div>
+
+<div>
+<h3 style="float:left;">TIME:45Minutes</h3>
+<h3 style="float:right;">MAXMARKS:10</h3>
+<br><br><br>
+<hr style="width:100%;"/>
+</center>
+</div>
+<!--<div class="vline"></div>-->
+<div>
+<b id='out'></b>
+<form id="group1" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST">
+<br>
+<p>1.What﻿﻿﻿ ﻿﻿tag ﻿﻿﻿﻿﻿was used to display the picture:  <input name="1" maxlength="90" type="text"></p>
+<p>2.Tag used for title is:  <input name="2" maxlength="90" type="text"></p>
+<p>3.Tag used for styling is:  <input name="3" maxlength="90" type="text"></p>
+<p>4.Is HTML a programming language:  <input name="4" maxlength="90" type="text"></p>
+<p>5.Css used for:  <input name="5" maxlength="90" type="text"></p>
+<p>6.javascript run by:  <input name="6" maxlength="90" type="text"></p>
+<p>7.Properties also called as:  <input name="7" maxlength="90" type="text"></p>
+<p>8.Acronym of HTML:  <input name="8" maxlength="90" type="text"></p>
+<p>9.Acronym of CSS:  <input name="9" maxlength="90" type="text"></p>
+<p>10.How many types of heading elements present in html:  <input name="10" maxlength="90" type="text"></p>
+<button onclick="closefunction()">Submit</button></div>
+</form>
+<form id="group2" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST">
+<br>
+<p>1.Tag used in scrolling:  <input name="1" maxlength="90" type="text"></p>
+<p>2.Attribute used for direction in scrolling tag:  <input name="2" maxlength="90" type="text"></p>
+<p>3.Tag used for table heading:  <input name="3" maxlength="90" type="text"></p>
+<p>4.Attribute used in merging rows:  <input name="4" maxlength="90" type="text"></p>
+<p>5.Tag used for horizontal line:  <input name="5" maxlength="90" type="text"></p>
+<p>6.Tag used in bullet list:  <input name="6" maxlength="90" type="text"></p>
+<p>7.Properties also called as:  <input name="7" maxlength="90" type="text"></p>
+<p>8.Acronym of HTML:  <input name="8" maxlength="90" type="text"></p>
+<p>9.Acronym of CSS:  <input name="9" maxlength="90" type="text"></p>
+<p>10.Tag used for numbered list:  <input name="10" maxlength="90" type="text"></p>
+<button onclick="closefunction()">Submit</button></div>
+</form>
+<form id="group3" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST">
+<br>
+<p>1.What﻿﻿﻿ ﻿﻿tag ﻿﻿﻿﻿﻿was used to display the video:  <input name="1" maxlength="90" type="text"></p>
+<p>2.Value of type attribute for passwords:  <input name="2" maxlength="90" type="text"></p>
+<p>3.Tag used for line break:  <input name="3" maxlength="90" type="text"></p>
+<p>4.Marquee used for:  <input name="4" maxlength="90" type="text"></p>
+<p>5.Attribute for address of image:  <input name="5" maxlength="90" type="text"></p>
+<p>6.Tag used for display text when image not loaded:  <input name="6" maxlength="90" type="text"></p>
+<p>7.Properties also called as:  <input name="7" maxlength="90" type="text"></p>
+<p>8.Acronym of HTML:  <input name="8" maxlength="90" type="text"></p>
+<p>9.Acronym of CSS:  <input name="9" maxlength="90" type="text"></p>
+<p>10.Attribute used for merging columns:  <input name="10" maxlength="90" type="text"></p>
+<button onclick="closefunction()">Submit</button></div>
+</form>
+</div>
 </body>
 <script>
-window.onload=loadfunction();
+if(performance.navigation.type==1){
+closefunction();
+}
 
+
+window.onload=loadfunction();
+var group="";
 function loadfunction(){
+var group1=["Deepa","Vinaya","Touheed","nvk"];
+var group2=["Priya","Ansh","Aryan"];
+var group3=["Akshay","Kaushik","Venkat"];
 if(sessionStorage.name==undefined){
 alert("you donot have permission to open this page");
-document.getElementById("form").action="examentry.php";
+window.location.replace("/exam/examentry.php");
+}
+else{
+G1=document.getElementById("group1");
+G2=document.getElementById("group2");
+G3=document.getElementById("group3");
+if(group1.includes(sessionStorage.name)){group="group1";G2.style.display=G3.style.display="none";G1.style.display="block";}
+else if(group2.includes(sessionStorage.name)) {group="group2";G1.style.display=G3.style.display="none";G2.style.display="block";}
+else if(group3.includes(sessionStorage.name)) {group="group3";G1.style.display=G2.style.display="none";G3.style.display="block";}
+else{alert("You are not part of Calcitex");window.location.replace("/exam/examentry.php");}
+if(localStorage.exam1count>=1) closefunction();
 }
 }
-
 
 function rightclick(){
 return false;
@@ -197,15 +174,14 @@ function time(){
 if(seconds<58){
 if(window.innerHeight<100){
 		myfunction();
-		close();}}
+		}}
 if(seconds==0){
 	seconds=60;
 	minutes=minutes-1;}
 else{
 seconds=seconds-1;}
 if(minutes==0){
-	myfunction();
-	close();}
+	myfunction();}
 document.getElementById('out').innerHTML=minutes+":"+seconds;}
 
 
@@ -225,7 +201,7 @@ function openFullscreen() {
 
 
 function closefunction(){
-document.getElementById("form").submit();}
+document.getElementById(group).submit();}
 
 
 

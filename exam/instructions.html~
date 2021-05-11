@@ -18,7 +18,8 @@ window.onload=loadfunction();
 
 function loadfunction(){
 if(sessionStorage.name==undefined){
-alert("Login first and then write exam");
+alert("you donot have permission to enter into this page");
+window.location.replace("/exam/examentry.php")
 }
 }
 
@@ -30,5 +31,5 @@ document.onselectstart=select;
 function select(){
 	return false;}
 function myfunction(){
-window.open("exampaper.php");}
+window.open("/exam/exampaper.php");}
 </script>
