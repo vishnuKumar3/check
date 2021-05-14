@@ -139,13 +139,11 @@ if(performance.navigation.type==1){
 closefunction();
 }
 
-
 window.onload=loadfunction();
-var group="";
 function loadfunction(){
-var group1=["Deepa","Vinaya","Touheed","nvk"];
+var group1=["Deepa","Vinaya","Touheed","Suhaanth"];
 var group2=["Priya","Ansh","Aryan"];
-var group3=["Akshay","Kaushik","Venkat"];
+var group3=["Akshay","Kaushik","Venkat","nvk"];
 if(sessionStorage.name==undefined){
 alert("you donot have permission to open this page");
 window.location.replace("/exam/examentry.php");
@@ -154,9 +152,9 @@ else{
 G1=document.getElementById("group1");
 G2=document.getElementById("group2");
 G3=document.getElementById("group3");
-if(group1.includes(sessionStorage.name)){group="group1";G2.style.display=G3.style.display="none";G1.style.display="block";}
-else if(group2.includes(sessionStorage.name)) {group="group2";G1.style.display=G3.style.display="none";G2.style.display="block";}
-else if(group3.includes(sessionStorage.name)) {group="group3";G1.style.display=G2.style.display="none";G3.style.display="block";}
+if(group1.includes(sessionStorage.name)){sessionStorage.group="group1";G2.style.display=G3.style.display="none";G1.style.display="block";}
+else if(group2.includes(sessionStorage.name)) {sessionStorage.group="group2";G1.style.display=G3.style.display="none";G2.style.display="block";}
+else if(group3.includes(sessionStorage.name)) {sessionStorage.group="group3";G1.style.display=G2.style.display="none";G3.style.display="block";}
 else{alert("You are not part of Calcitex");window.location.replace("/exam/examentry.php");}
 if(localStorage.exam1count>=1) closefunction();
 }
@@ -209,7 +207,8 @@ function openFullscreen() {
 
 
 function closefunction(){
-document.getElementById(group).submit();}
+document.getElementById(sessionStorage.group).submit();
+}
 
 
 
