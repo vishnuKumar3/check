@@ -1,7 +1,7 @@
 <!doctype html>
 <head>
 <title>Exam Portal</title>
-<link rel="icon" href="logo.jpeg"/>
+<link rel="icon" href="images/logo.jpeg"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
 <style>
 .box{margin-top:10%;margin-left:40%;width:402px;border-radius:10px;padding-bottom:20px;border:1px solid black;}
@@ -17,7 +17,7 @@ form input:nth-child(3){padding:5px 20px 5px 20px;border:2px solid #aaa;border-r
 
 *{font-family:newfont;}
 @font-face{
-src:url("MavenPro-Regular.ttf");
+src:url("fonts/MavenPro-Regular.ttf");
 font-family:newfont;
 }
 
@@ -38,7 +38,7 @@ font-family:newfont;
 <body>
 
 <div class="navbar">
-<img src="logo.jpeg">
+<img src="images/logo.jpeg">
 <div class="imgbox" style="text-align:center;">
 <p>Calcite X</p>
 <p>Shaping the Uncut</p>
@@ -49,12 +49,12 @@ font-family:newfont;
 <div class="box">
 <div class="login"><h1>Login</h1></div>
 <form id="form" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST">
-<h2><img src="user.svg" style="width:20px;height:20px;"> Username:
+<h2><img src="icons/user.svg" style="width:20px;height:20px;"> Username:
 <input type="text" id='username' name="user"  placeholder="username:" autofocus required style="width:80%;height:30px;margin-bottom:10px;"></h2>
-<h2><img src="password.svg" style="width:20px;height:20px;"> Password:
+<h2><img src="icons/password.svg" style="width:20px;height:20px;"> Password:
 <input type="password" id='password' name="pass"  placeholder="password:" required style="width:80%;height:30px;margin-bottom:30px;">
 
-<button type="button" onclick="visibility()" style="border:none;background:transparent;"><img src="visible.svg" id="icon"/></button>
+<button type="button" onclick="visibility()" style="border:none;background:transparent;"><img src="icons/visible.svg" id="icon"/></button>
 </h2>
 <input style="margin-left:5%;" name="result" type="submit" value="submit" onclick="myfunction()"></input>
 </form>
@@ -74,13 +74,13 @@ function visibility(){
 var type=document.getElementById("password").type;
 var ele=document.getElementById("password");
 var icon=document.getElementById("icon");
-if(type=="text"){ele.type="password";icon.src="visible.svg"}
-else{ele.type="text";icon.src="invisible.svg"};
+if(type=="text"){ele.type="password";icon.src="icons/visible.svg"}
+else{ele.type="text";icon.src="icons/invisible.svg"};
 }
 
 
 function rightclick(){
-return true;
+return false;
 }
 document.oncontextmenu=rightclick;
 document.onselectstart=select;

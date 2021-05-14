@@ -3,11 +3,14 @@
 <title>Instructions</title>
 <link rel="icon" href="logo.jpeg"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<style>p{word-spacing:3px;}</style>
+<style>
+input{padding:3px 10px 3px 10px;border-radius:5px;}
+p{word-spacing:3px;}
+</style>
 </head>
 <h3 style="color:red;">INSTRUCTIONS</h3>
-<p>1.Donot try to click the top menu bar.If you click then your marks are zero</p>
-<p>2.You must click Submit within the given time else your exam terminates</p>
+<p>1.Don't try to open any other page,if open then your exam will come to an end.</p>
+<p>2.You must click Submit button within the given time else your exam automatically terminates</p>
 <p>3.Click the below button to start exam</p>
 <br>
 
@@ -24,12 +27,12 @@ window.location.replace("/exam/examentry.php")
 }
 
 function rightclick(){
-return false;
+return true;
 }
 document.oncontextmenu=rightclick;
 document.onselectstart=select;
 function select(){
 	return false;}
 function myfunction(){
-window.open("/exam/exampaper.php");}
+window.location.replace("/exam/exampaper.php");}
 </script>

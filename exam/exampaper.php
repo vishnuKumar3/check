@@ -32,7 +32,7 @@ die();}
 ?>
 <title>MainExam</title>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<link rel="icon" href="logo.jpeg"/>
+<link rel="icon" href="images/logo.jpeg"/>
 <style>
 .select{margin-right:5px;margin-top:100px;} 
 .vline{border:1px solid black;height:1500px;} 
@@ -48,6 +48,12 @@ button{padding:5px 20px 5px 20px;border:2px solid #aaa;border-radius:5px;box-sha
 .navbar div p:nth-child(2){font-style:italic;margin-top:-20px;}
 .navbar img{width:10%;height:100px;}
 
+*{font-family:newfont;}
+@font-face{
+src:url("fonts/MavenPro-Regular.ttf");
+font-family:newfont;
+}
+
 @media (min-width:1500px){
 .navbar img{width:10%;height:200px;}
 }
@@ -59,12 +65,14 @@ button{padding:5px 20px 5px 20px;border:2px solid #aaa;border-radius:5px;box-sha
 .navbar .imgbox{margin-top:-10%;}
 .navbar div:nth-last-child(1){display:none;}
 }
+
+body{padding:0% 2% 2% 2%;}
 </style>
 
 <body onblur="closefunction()" onmousedown="openFullscreen()" >
 
 <div class="navbar">
-<img src="logo.jpeg">
+<img src="images/logo.jpeg">
 <div class="imgbox" style="text-align:center;">
 <p>Calcite X</p>
 <p>Shaping the Uncut</p>
@@ -73,7 +81,7 @@ button{padding:5px 20px 5px 20px;border:2px solid #aaa;border-radius:5px;box-sha
 </div>
 
 <div>
-<h3 style="float:left;">TIME:45Minutes</h3>
+<h3 style="float:left;">TIME:30Minutes</h3>
 <h3 style="float:right;">MAXMARKS:10</h3>
 <br><br><br>
 <hr style="width:100%;"/>
@@ -169,7 +177,7 @@ function select(){
 window.setInterval(time,1000);
 document.getElementById('out').style.color="red";
 var seconds=60;
-var minutes=45;
+var minutes=29;
 function time(){
 if(seconds<58){
 if(window.innerHeight<100){
@@ -182,7 +190,7 @@ else{
 seconds=seconds-1;}
 if(minutes==0){
 	myfunction();}
-document.getElementById('out').innerHTML=minutes+":"+seconds;}
+document.getElementById('out').innerHTML="TIME LEFT: "+minutes+":"+seconds;}
 
 
 var elem = document.documentElement;
