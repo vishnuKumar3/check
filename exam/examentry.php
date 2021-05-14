@@ -11,7 +11,7 @@ h2{color:green;margin-left:5%;}
 .navbar div p:nth-child(1){font-size:30px;color:white;text-shadow:1px 2px 2px black,3px 4px 5px darkblue;}
 .navbar div p:nth-child(2){font-style:italic;margin-top:-20px;}
 .navbar img{width:10%;height:100px;}
-form input:nth-child(1),input:nth-child(2){border-width:0 0 2px 0;border-bottom-color:black;border-radius:5px;}
+form input:nth-child(1),input:nth-child(2){border:1px solid black;border-radius:5px 15px 5px 15px;}
 form input:nth-child(1):focus,input:nth-child(2):focus{background:#eee;transition:all 2s;}
 form input:nth-child(3){padding:5px 20px 5px 20px;border:2px solid #aaa;border-radius:5px;box-shadow:1px 1px 1px black;}
 
@@ -35,7 +35,7 @@ font-family:newfont;
 }
 </style>
 </head>
-<body >
+<body>
 
 <div class="navbar">
 <img src="logo.jpeg">
@@ -49,10 +49,9 @@ font-family:newfont;
 <div class="box">
 <div class="login"><h1>Login</h1></div>
 <form id="form" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST">
-<h2>Username:
-<br>
+<h2><img src="user.svg" style="width:20px;height:20px;"> Username:
 <input type="text" id='username' name="user"  placeholder="username:" autofocus required style="width:80%;height:30px;margin-bottom:10px;"></h2>
-<h2>Password:
+<h2><img src="password.svg" style="width:20px;height:20px;"> Password:
 <input type="password" id='password' name="pass"  placeholder="password:" required style="width:80%;height:30px;margin-bottom:30px;">
 
 <button type="button" onclick="visibility()" style="border:none;background:transparent;"><img src="visible.svg" id="icon"/></button>
@@ -81,7 +80,7 @@ else{ele.type="text";icon.src="invisible.svg"};
 
 
 function rightclick(){
-return false;
+return true;
 }
 document.oncontextmenu=rightclick;
 document.onselectstart=select;

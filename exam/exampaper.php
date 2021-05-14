@@ -73,7 +73,7 @@ button{padding:5px 20px 5px 20px;border:2px solid #aaa;border-radius:5px;box-sha
 </div>
 
 <div>
-<h3 style="float:left;">TIME:30 Minutes</h3>
+<h3 style="float:left;">TIME:45Minutes</h3>
 <h3 style="float:right;">MAXMARKS:10</h3>
 <br><br><br>
 <hr style="width:100%;"/>
@@ -135,7 +135,7 @@ closefunction();
 window.onload=loadfunction();
 var group="";
 function loadfunction(){
-var group1=["Deepa","Vinaya","Touheed","nvk","Suhaanth"];
+var group1=["Deepa","Vinaya","Touheed","nvk"];
 var group2=["Priya","Ansh","Aryan"];
 var group3=["Akshay","Kaushik","Venkat"];
 if(sessionStorage.name==undefined){
@@ -169,7 +169,7 @@ function select(){
 window.setInterval(time,1000);
 document.getElementById('out').style.color="red";
 var seconds=60;
-var minutes=30;
+var minutes=45;
 function time(){
 if(seconds<58){
 if(window.innerHeight<100){
