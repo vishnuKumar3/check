@@ -51,7 +51,7 @@ font-family:newfont;
 <form id="form" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST">
 <h2>Username:
 <br>
-<input type="text" id='username' name="user"  placeholder="username:" autofocus required style="width:80%;height:30px;margin-bottom:10px;"></h2>
+<input type="text" id='username' name="user"  placeholder="" autofocus required style="width:80%;height:30px;margin-bottom:10px;"></h2>
 <h2>Password:
 <input type="password" id='password' name="pass"  placeholder="password:" required style="width:80%;height:30px;margin-bottom:30px;">
 
