@@ -1,0 +1,44 @@
+<!doctype html>
+<head>
+<title>Instructions</title>
+<link rel="icon" href="images/logo.jpeg"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+
+<style>
+input{padding:3px 10px 3px 10px;border-radius:5px;}
+p{word-spacing:3px;}
+*{font-family:newfont;}
+@font-face{
+src:url("fonts/MavenPro-Regular.ttf");
+font-family:newfont;
+}
+</style>
+</head>
+<h3 style="color:red;">INSTRUCTIONS</h3>
+<p>1.Don't try to open any other page,if open then your exam will come to an end.</p>
+<p>2.You must click Submit button within the given time else your exam automatically terminates</p>
+<p>3.Click the below button to start exam</p>
+<br>
+
+<input type="submit" onclick="myfunction()" value="click"></input>
+
+<script>
+window.onload=loadfunction();
+
+function loadfunction(){
+if(sessionStorage.name==undefined){
+alert("you donot have permission to enter into this page");
+window.location.replace("/exam/examentry.php")
+}
+}
+
+function rightclick(){
+return false;
+}
+document.oncontextmenu=rightclick;
+document.onselectstart=select;
+function select(){
+	return false;}
+function myfunction(){
+window.location.replace("/exam/exampaper.php");}
+</script>
