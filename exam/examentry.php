@@ -1,4 +1,5 @@
 <!doctype html>
+<link rel="icon" href="images/logo.jpeg"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
 <style>
 @keyframes anim{from{width:0px} to{width:600px;}}
