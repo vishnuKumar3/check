@@ -156,7 +156,10 @@ if(group1.includes(sessionStorage.name)){sessionStorage.group="group1";G2.style.
 else if(group2.includes(sessionStorage.name)) {sessionStorage.group="group2";G1.style.display=G3.style.display="none";G2.style.display="block";}
 else if(group3.includes(sessionStorage.name)) {sessionStorage.group="group3";G1.style.display=G2.style.display="none";G3.style.display="block";}
 else{alert("You are not part of Calcitex");window.location.replace("/exam/examentry.php");}
-if(localStorage.exam1count>=1) closefunction();
+if(localStorage.exam1countModify==undefined)
+localStorage.exam1count=0;
+else 
+closefunction();
 }
 }
 

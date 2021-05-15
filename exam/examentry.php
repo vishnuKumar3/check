@@ -62,10 +62,6 @@ font-family:newfont;
 </body>
 <script>
 function myfunction(){
-if(localStorage.exam1count==undefined)
-localStorage.exam1count=0;
-else 
-localStorage.exam1count+=1;
 sessionStorage.name=document.getElementById('username').value;
 document.getElementById("form").submit();
 }
