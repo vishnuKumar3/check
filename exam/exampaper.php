@@ -92,8 +92,8 @@ body{padding:0% 2% 2% 2%;}
 <b id='out'></b>
 <form id="group1" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST">
 <br>
-<p>1.What﻿﻿﻿ ﻿﻿tag ﻿﻿﻿﻿﻿was used to display the picture:  <input name="1" maxlength="90" type="text"></p>
-<p>2.Tag used for title is:  <input name="2" maxlength="90" type="text"></p>
+<p>1.Tag used to display the picture:  <input name="1" maxlength="90" type="text"></p>
+<p>2.Metatag used for responsiveness is:  <input name="2" maxlength="90" type="text"></p>
 <p>3.Tag used for styling is:  <input name="3" maxlength="90" type="text"></p>
 <p>4.Is HTML a programming language:  <input name="4" maxlength="90" type="text"></p>
 <p>5.Css used for:  <input name="5" maxlength="90" type="text"></p>
@@ -106,8 +106,8 @@ body{padding:0% 2% 2% 2%;}
 </form>
 <form id="group2" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST">
 <br>
-<p>1.Tag used in scrolling:  <input name="1" maxlength="90" type="text"></p>
-<p>2.Attribute used for direction in scrolling tag:  <input name="2" maxlength="90" type="text"></p>
+<p>1.Use of name attribute in input types:<input name="1" maxlength="90" type="text"></p>
+<p>2.Attribute used for direction in marquee tag:  <input name="2" maxlength="90" type="text"></p>
 <p>3.Tag used for table heading:  <input name="3" maxlength="90" type="text"></p>
 <p>4.Attribute used in merging rows:  <input name="4" maxlength="90" type="text"></p>
 <p>5.Tag used for horizontal line:  <input name="5" maxlength="90" type="text"></p>
@@ -120,7 +120,7 @@ body{padding:0% 2% 2% 2%;}
 </form>
 <form id="group3" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST">
 <br>
-<p>1.What﻿﻿﻿ ﻿﻿tag ﻿﻿﻿﻿﻿was used to display the video:  <input name="1" maxlength="90" type="text"></p>
+<p>1.Tag used to display the video:  <input name="1" maxlength="90" type="text"></p>
 <p>2.Value of type attribute for passwords:  <input name="2" maxlength="90" type="text"></p>
 <p>3.Tag used for line break:  <input name="3" maxlength="90" type="text"></p>
 <p>4.Marquee used for:  <input name="4" maxlength="90" type="text"></p>
