@@ -69,6 +69,10 @@ th,td{border:1px solid black;padding:10px;}
 
 
 <script>
+document.oncontextmenu=context();
+document.onselectstart=select();
+function context(){return false;}
+function select(){return false;}
 window.onload=loadfunction();
 
 
@@ -76,6 +80,7 @@ function loadfunction(){
 if(sessionStorage.name==undefined || sessionStorage.name=="not defined") {
 alert("First Login and then check the results");
 document.getElementById("body").style.background="black";
+document.getElementById("body").style.display="none";
 window.location.replace("/exam/results.php");
 }
 }
