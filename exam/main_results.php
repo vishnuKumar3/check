@@ -43,6 +43,7 @@ th,td{border:1px solid black;padding:10px;}
 }
 </style>
 
+<body id="body">
 <div class="navbar">
 <img src="images/logo.jpeg">
 <div class="imgbox" style="text-align:center;">
@@ -64,6 +65,8 @@ th,td{border:1px solid black;padding:10px;}
 </tr>
 </table>
 </center>
+</body>
+
 
 <script>
 window.onload=loadfunction();
@@ -72,6 +75,7 @@ window.onload=loadfunction();
 function loadfunction(){
 if(sessionStorage.name==undefined || sessionStorage.name=="not defined") {
 alert("First Login and then check the results");
+document.getElementById("body").display="none";
 window.location.replace("/exam/results.php");
 }
 }
