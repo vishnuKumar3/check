@@ -75,7 +75,7 @@ window.onload=loadfunction();
 function loadfunction(){
 if(sessionStorage.name==undefined || sessionStorage.name=="not defined") {
 alert("First Login and then check the results");
-document.getElementById("body").display="none";
+document.getElementById("body").style.background="black";
 window.location.replace("/exam/results.php");
 }
 }
