@@ -69,8 +69,8 @@ th,td{border:1px solid black;padding:10px;}
 
 
 <script>
-document.oncontextmenu=context();
-document.onselectstart=select();
+document.oncontextmenu=context;
+document.onselectstart=select;
 function context(){return false;}
 function select(){return false;}
 window.onload=loadfunction();
