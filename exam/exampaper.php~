@@ -19,9 +19,9 @@ $total="";
 for($i=1;$i<=10;$i++){
 		$total=$total."-".$result[$i];}
 $host="sql6.freemysqlhosting.net";
-$username="sql6408612";
-$password="w3Rvh3peL1";
-$dbname="sql6408612";
+$username="sql6415027";
+$password="QLpClerTmP";
+$dbname="sql6415027";
 $conn=new mysqli($host,$username,$password,$dbname);
 $insert=$conn->prepare("INSERT INTO mytable values(?,?)");
 $insert->bind_param("ss",$user,$total);

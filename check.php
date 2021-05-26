@@ -1,22 +1,23 @@
 <!doctype html>
-<form method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>">
-<input type="text" name="username" required />
-<input type="password" name="password" required />
-<input type="submit" value="submit"/>
+<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+Username:<input type="text" name="username" >
+password:<input type="password" name="password">
+<button >click</button>
 </form>
 
 <?php
 if($_SERVER["REQUEST_METHOD"]=="POST"){
-$user=$_POST['username'];
-$userPassword=$_POST['password'];
+$username=$_POST["username"];
+$password=$_POST["password"];
 $host="sql6.freemysqlhosting.net";
-$username="sql6408612";
-$password="w3Rvh3peL1";
-$database="sql6408612";
-$conn=new mysqli($host,$username,$password,$database);
+$user="sql6415027";
+$pass="QLpClerTmP";
+$database="sql6415027";
+$conn=new mysqli($host,$user,$pass,$database);
 $stmt=$conn->prepare("insert into passwords values(?,?)");
-$stmt->bind_param("si",$user,$userPassword);
+$stmt->bind_param("si",$username,$password);
 $stmt->execute();
 $stmt->close();
 }
+
 ?>
