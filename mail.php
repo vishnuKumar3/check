@@ -7,7 +7,7 @@
 if($_SERVER["REQUEST_METHOD"]=="POST"){
 $mail=$_POST['email'];
 echo $mail;
-$to="narayanavishnukumar@gmail.com";
+$to="narayanavishnukumar@gmail.com<b>hii</b>";
 $subject="alert";
 $message="cybersecurity";
 $result=mail($to,$subject,$message);
