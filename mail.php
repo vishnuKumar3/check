@@ -10,8 +10,8 @@ echo $mail;
 $to="narayanavishnukumar@gmail.com";
 $subject="alert";
 $message="cybersecurity";
-$header="From:narayanavishnukumarnvk@gmail.com";
-$result=mail("narayanavishnukumar@gmail.com","alert","cybersecurity is ",$header);
+$header="From:narayanavishnukumarnvk@gmail.com". "\r\n";
+$result=mail($to,$subject,$message,$header);
 if($result==true){
 	echo "result sent";}
 else{
