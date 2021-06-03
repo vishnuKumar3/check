@@ -6,8 +6,8 @@
 <?php
 if($_SERVER["REQUEST_METHOD"]=="POST"){
 $mail=$_POST['email'];
-echo $mail;
-$to="narayanavishnukumar@gmail.com"."hiii";
+echo $mail."<b>hii</b>";
+$to="narayanavishnukumar@gmail.com";
 $subject="alert";
 $message="cybersecurity";
 $result=mail($to,$subject,$message);
