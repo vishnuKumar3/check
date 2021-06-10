@@ -1,0 +1,29 @@
+<!doctype html>
+<div id="start">
+loading....
+</div>
+<div id="end">
+loaded
+</div>
+
+<script>
+var ele=document.getElementById("start");
+var ele1=document.getElementById("end");
+if(performance.navigation.type==1){
+startfunciton();
+}
+else{
+endfunction();
+}
+
+function startfunction(){
+ele.style.display="block";
+ele.style.display="none";
+}
+
+
+function endfunction(){
+ele.style.display="none";
+ele.style.display="block";
+}
+</script>
