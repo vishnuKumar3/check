@@ -9,20 +9,5 @@ loaded
 <script>
 var ele=document.getElementById("start");
 var ele1=document.getElementById("end");
-if(performance.navigation.type==1){
-startfunciton();
-}
-else{
-endfunction();
-}
-
-function startfunction(){
-alert("hii");
-}
-
-
-function endfunction(){
-ele.style.display="none";
-ele.style.display="block";
-}
+window.onload=function(){alert("hello";)}
 </script>
