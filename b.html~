@@ -9,6 +9,10 @@ loaded
 <script>
 var ele=document.getElementById("start");
 var ele1=document.getElementById("end");
-if(document.readyState=='interactive'){ele.style.display="block";ele1.style.display="none";}
+/*window.setInterval(fun,3000);
+function fun(){
+alert(document.readyState);
+}*/
+if(document.readyState=='loading'){ele.style.display="block";ele1.style.display="none";}
 else{ele.style.display="none";ele1.style.display="block";}
 </script>
