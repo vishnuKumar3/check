@@ -9,5 +9,6 @@ loaded
 <script>
 var ele=document.getElementById("start");
 var ele1=document.getElementById("end");
-window.onload=function(){alert("hello");}
+if(document.readyState=="loading"){ele.style.display="block";ele1.style.display="none";}
+else{ele.style.display="none";ele1.style.display="block";}
 </script>
