@@ -137,7 +137,7 @@ if(!empty($user) && !empty($pass)){
 	$sql=$conn->query($select);
 	while($row=$sql->fetch_assoc()){
 		if($row['username']==$user && $row['password']==$pass){
-			echo "<script>window.location.replace('/instructions.html')</script>"
+			echo "<script>window.location.replace('/instructions.html')</script>";
 			die("Login Successful");}}
 	
 	echo '<script>alert("Login unsuccessful");</script>';
