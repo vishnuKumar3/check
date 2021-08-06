@@ -93,7 +93,7 @@ else{ele.type="text";icon.src="icons/invisible.svg"};
 
 
 function rightclick(){
-return true;
+return false;
 }
 document.oncontextmenu=rightclick;
 document.onselectstart=select;
@@ -137,7 +137,8 @@ if(!empty($user) && !empty($pass)){
 	$sql=$conn->query($select);
 	while($row=$sql->fetch_assoc()){
 		if($row['username']==$user && $row['password']==$pass){
-			echo "<script>window.location.replace('/instructions.html')</script>";
+			//header("Location:instructions.html");
+			echo "<script>window.location.replace('/exam/instructions.html')</script>";
 			die("Login Successful");}}
 	
 	echo '<script>alert("Login unsuccessful");</script>';
