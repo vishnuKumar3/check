@@ -1,0 +1,25 @@
+<!--<!doctype html>
+<frameset rows="30%,70%">
+<frame name="target" src="a.html"/>
+<frame src="b.html">
+</frameset>-->
+<!doctype html>
+<style>
+#box{
+border:50px solid transparent;
+width:300px;height:200px;
+border-image:url('border.png') 30 stretch;
+}
+</style>
+<button onclick="fun()">click</button>
+
+<script>
+function fun(){
+  const d = new Date();
+  d.setTime(d.getTime() + (2*24*60*60*1000));
+  let expires = "expires="+ d.toUTCString();
+	document.cookie="username=johndoe;"+expires+";path=/";
+	var name=decodeURIComponent(document.cookie);
+	alert(name);
+}
+</script>
