@@ -15,10 +15,7 @@ border-image:url('border.png') 30 stretch;
 
 <script>
 function fun(){
-  const d = new Date();
-  d.setTime(d.getTime() + (0*24*60*60*1000));
-  let expires = "expires="+ d.toUTCString();
-	document.cookie="username=johndoe;"+expires+";path=/";
+	document.cookie="username=johndoe";
 	var name=decodeURIComponent(document.cookie);
 	alert(name);
 }
