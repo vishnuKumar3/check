@@ -24,10 +24,10 @@ $result=$row["result"];
 <link rel="icon" href="images/logo.png"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
 <style>
-.navbar{display:flex;flex-direction:row;justify-content:space-between;align-items:start;}
+.navbar{display:flex;flex-direction:row;justify-content:space-around;align-items:start;}
 .navbar div p:nth-child(1){font-size:30px;color:white;text-shadow:1px 2px 2px black,3px 4px 5px darkblue;}
 .navbar div p:nth-child(2){font-style:italic;margin-top:-20px;}
-.navbar img{width:10%;height:100px;}
+.navbar img{width:0px;height:0px;}
 #table{border:1px solid black;margin-top:100px;border-collapse:collapse;border-radius:10px;}
 th,td{border:1px solid black;padding:10px;}
 
@@ -47,8 +47,8 @@ th,td{border:1px solid black;padding:10px;}
 <div class="navbar">
 <img src="images/logo.png">
 <div class="imgbox" style="text-align:center;">
-<p>Calcite X</p>
-<p>Shaping the Uncut</p>
+<p>ETest</p>
+<p>Online test platform</p>
 </div>
 <button style="padding:3px;" onclick="logout()">Logout</button>
 </div>

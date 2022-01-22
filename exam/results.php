@@ -4,13 +4,14 @@
 <link rel="icon" href="images/logo.png"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
 <style>
-.box{margin-top:10%;margin-left:40%;width:402px;border-radius:10px;padding-bottom:20px;border:1px solid black;}
+body{display:flex;justify-content:center;align-items:center;flex-direction:column;}
+.box{margin-top:10%;margin-left:0%;width:402px;border-radius:10px;padding-bottom:20px;border:1px solid black;}
 .login{width:99.5%;height:50px;border:1px solid transparent;top:0;border-radius:10px;background-color:lime;padding-bottom:10px;} h1{color:blue;margin-left:5%;}
 h2{color:green;margin-left:5%;}
 .navbar{display:flex;flex-direction:row;justify-content:space-between;align-items:start;}
 .navbar div p:nth-child(1){font-size:30px;color:white;text-shadow:1px 2px 2px black,3px 4px 5px darkblue;}
 .navbar div p:nth-child(2){font-style:italic;margin-top:-20px;}
-.navbar img{width:10%;height:100px;}
+.navbar img{width:10%;height:100px;display:none;}
 form input:nth-child(1),input:nth-child(2){border:1px solid black;border-radius:5px 15px 5px 15px;}
 form input:nth-child(1):focus,input:nth-child(2):focus{background:#eee;transition:all 2s;}
 form input:nth-child(3){padding:5px 20px 5px 20px;border:2px solid #aaa;border-radius:5px;box-shadow:1px 1px 1px black;}
