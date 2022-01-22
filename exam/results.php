@@ -1,7 +1,7 @@
 <!doctype html>
 <head>
-<title>Exam Portal</title>
-<link rel="icon" href="images/logo.jpeg"/>
+<title>ETest</title>
+<link rel="icon" href="images/logo.png"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
 <style>
 .box{margin-top:10%;margin-left:40%;width:402px;border-radius:10px;padding-bottom:20px;border:1px solid black;}
@@ -38,10 +38,10 @@ font-family:newfont;
 <body>
 
 <div class="navbar">
-<img src="images/logo.jpeg">
+<img src="images/logo.png">
 <div class="imgbox" style="text-align:center;">
-<p>Calcite X</p>
-<p>Shaping the Uncut</p>
+<p>ETest</p>
+<p>Online test platform</p>
 </div>
 <div></div>
 </div>

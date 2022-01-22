@@ -16,18 +16,22 @@ animation-timing-function:steps(100,end);
 Test completed.....
 </div>-->
 <!doctype html>
+<?php
+session_start();
+?>
 <head>
-<title>Exam Portal</title>
-<link rel="icon" href="images/logo.jpeg"/>
+<title>ETest</title>
+<link rel="icon" href="images/logo.png"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
 <style>
-.box{margin-top:10%;margin-left:40%;width:402px;border-radius:10px;padding-bottom:20px;border:1px solid black;}
+body{display:flex;justify-content:center;align-items:center;flex-direction:column;}
+.box{margin-top:10%;width:402px;border-radius:10px;padding-bottom:20px;border:1px solid black;}
 .login{width:99.5%;height:50px;border:1px solid transparent;top:0;border-radius:10px;background-color:lime;padding-bottom:10px;} h1{color:blue;margin-left:5%;}
 h2{color:green;margin-left:5%;}
-.navbar{display:flex;flex-direction:row;justify-content:space-between;align-items:start;}
+.navbar{display:flex;flex-direction:row;justify-content:center;align-items:start;}
 .navbar div p:nth-child(1){font-size:30px;color:white;text-shadow:1px 2px 2px black,3px 4px 5px darkblue;}
 .navbar div p:nth-child(2){font-style:italic;margin-top:-20px;}
-.navbar img{width:10%;height:100px;}
+.navbar img{width:0px;height:0px;}
 form input:nth-child(1),input:nth-child(2){border:1px solid black;border-radius:5px 15px 5px 15px;}
 form input:nth-child(1):focus,input:nth-child(2):focus{background:#eee;transition:all 2s;}
 form input:nth-child(3){padding:5px 20px 5px 20px;border:2px solid #aaa;border-radius:5px;box-shadow:1px 1px 1px black;}
@@ -55,10 +59,10 @@ font-family:newfont;
 <body>
 
 <div class="navbar">
-<img src="images/logo.jpeg">
+<img src="images/logo.png">
 <div class="imgbox" style="text-align:center;">
-<p>Calcite X</p>
-<p>Shaping the Uncut</p>
+<p>ETest</p>
+<p>Online test platform</p>
 </div>
 <div></div>
 </div>
@@ -120,7 +124,6 @@ window.history.go(0);}
 </script>-->
 
 <?php
-session_start();
 if($_SERVER["REQUEST_METHOD"]=="POST" && isset($_POST['result'])){
 $user=$_POST['user'];
 $pass=$_POST['pass'];
@@ -138,7 +141,7 @@ if(!empty($user) && !empty($pass)){
 	while($row=$sql->fetch_assoc()){
 		if($row['username']==$user && $row['password']==$pass){
 			//header("Location:instructions.html");
-			echo "<script>window.location.replace('/exam/instructions.html')</script>";
+			echo "<script>window.location.replace('instructions.html')</script>";
 			die("Login Successful");}}
 	
 	echo '<script>alert("Login unsuccessful");</script>';

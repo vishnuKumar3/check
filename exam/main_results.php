@@ -20,8 +20,8 @@ $result=$row["result"];
 ?>
 
 <head>
-<title>Exam Portal</title>
-<link rel="icon" href="images/logo.jpeg"/>
+<title>ETest | results</title>
+<link rel="icon" href="images/logo.png"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
 <style>
 .navbar{display:flex;flex-direction:row;justify-content:space-between;align-items:start;}
@@ -45,7 +45,7 @@ th,td{border:1px solid black;padding:10px;}
 
 <body id="body">
 <div class="navbar">
-<img src="images/logo.jpeg">
+<img src="images/logo.png">
 <div class="imgbox" style="text-align:center;">
 <p>Calcite X</p>
 <p>Shaping the Uncut</p>
@@ -87,6 +87,6 @@ window.location.replace("/exam/results.php");
 
 function logout(){
 sessionStorage.name="not defined";
-window.location.replace("/exam/results.php");
+window.location.replace("results.php");
 }
 </script>

@@ -27,12 +27,12 @@ $insert=$conn->prepare("INSERT INTO mytable values(?,?)");
 $insert->bind_param("ss",$user,$total);
 $insert->execute();
 $insert->close();
-echo '<script>window.alert("Your exam is over");window.location.replace("/exam/examentry.php");</script>';
+echo '<script>window.alert("Your exam is over");window.location.replace("examentry.php");</script>';
 die();}
 ?>
-<title>MainExam</title>
+<title>ETest | Exam paper</title>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<link rel="icon" href="images/logo.jpeg"/>
+<link rel="icon" href="images/logo.png"/>
 <style>
 
 body,html{scrolling-behavior:smooth;}
@@ -45,10 +45,10 @@ form{margin-right:5%;width:100%;}
 #group1 p input,#group2 p input,#group3 p input{border:none;border-radius:5px;width:30%;height:30px;background:#ddd;transition:2s;}
 button{padding:5px 20px 5px 20px;border:2px solid #aaa;border-radius:5px;box-shadow:1px 1px 1px black;}
 #group1 p input:focus,#group2 p input:focus,#group3 p input:focus{border-bottom:1px solid black;background:#fff;transition:2s;}
-.navbar{display:flex;flex-direction:row;justify-content:space-between;align-items:center;}
+.navbar{display:flex;flex-direction:row;justify-content:center;align-items:center;}
 .navbar div p:nth-child(1){font-size:30px;color:white;text-shadow:1px 2px 2px black,3px 4px 5px darkblue;}
 .navbar div p:nth-child(2){font-style:italic;margin-top:-20px;}
-.navbar img{width:10%;height:100px;}
+.navbar img{width:10%;height:100px;display:none;}
 
 *{font-family:newfont;}
 @font-face{
@@ -77,10 +77,10 @@ body{padding:0% 2% 2% 2%;}
 <body onblur="closefunction()" onmousedown="openFullscreen()" onoffline="offlineFun()" ononline="onlineFun()" >
 
 <div class="navbar">
-<img src="images/logo.jpeg">
+<img src="images/logo.png">
 <div class="imgbox" style="text-align:center;">
-<p>Calcite X</p>
-<p>Shaping the Uncut</p>
+<p>ETest</p>
+<p>Online test platform</p>
 <h3 style="color:lime;"  id="online"><img src="icons/wifi.png" style="width:20px;height:20px;">&nbsp You are Online</h3>
 <h3 style="color:red;" id="offline"><img src="icons/no-wifi.png" style="width:20px;height:20px;">&nbsp You are Offline</h3>
 </div>
