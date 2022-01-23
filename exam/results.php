@@ -29,8 +29,8 @@ font-family:newfont;
 
 @media (max-width:1000px){
 .box{margin:2% 1% 0% 1%;width:98%;}
-.navbar{display:flex;flex-direction:row;padding-bottom:10%;align-items:center;justify-content:start;}
-.navbar img{width:30%;height:100px;}
+.navbar{display:flex;flex-direction:row;padding-bottom:10%;align-items:center;justify-content:center;}
+.navbar img{width:30%;height:100px;display:none;}
 .navbar .imgbox{margin-top:-10%;}
 .navbar div:nth-last-child(1){display:none;}
 }

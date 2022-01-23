@@ -36,8 +36,8 @@ th,td{border:1px solid black;padding:10px;}
 }
 
 @media (max-width:1000px){
-.navbar{display:flex;flex-direction:row;padding-bottom:10%;align-items:center;justify-content:space-between;}
-.navbar img{width:30%;height:100px;}
+.navbar{display:flex;flex-direction:column;padding-bottom:10%;align-items:center;justify-content:space-between;}
+.navbar img{width:30%;height:100px;display:none;}
 .navbar .imgbox{margin-top:-10%;}
 .navbar div:nth-last-child(1){display:none;}
 }

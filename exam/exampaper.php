@@ -62,8 +62,8 @@ font-family:newfont;
 
 @media (max-width:1000px){
 #group1 p input,#group2 p input,#group3 p input{width:100%;}
-.navbar{display:flex;flex-direction:row;padding-bottom:10%;align-items:center;justify-content:start;}
-.navbar img{width:30%;height:100px;}
+.navbar{display:flex;flex-direction:row;padding-bottom:10%;align-items:center;justify-content:center;}
+.navbar img{width:30%;height:100px;display:none;}
 .navbar .imgbox{margin-top:-10%;}
 .navbar div:nth-last-child(1){display:none;}
 }
