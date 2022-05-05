@@ -4,9 +4,9 @@
 session_start();
 $username=$_SESSION["username"];
 $host="sql6.freemysqlhosting.net";
-$user="sql6415027";
-$pass="QLpClerTmP";
-$database="sql6415027";
+$user="sql6480531";
+$pass="Dsi62kV3KF";
+$database="sql6480531";
 $conn=new mysqli($host,$user,$pass,$database);
 $select="select * from results";
 $rows=$conn->query($select);
