@@ -1,5 +1,5 @@
 <!doctype html>
-<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+<form method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
 Username:<input type="text" name="username" >
 password:<input type="password" name="password">
 <button >click</button>
