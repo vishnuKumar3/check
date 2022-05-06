@@ -139,7 +139,6 @@ if(!empty($user) && !empty($pass)){
 	$select="SELECT * FROM passwords";
 	$sql=$conn->query($select);
 	while($row=$sql->fetch_assoc()){
-			echo $row['username']." ".$row['password']
 		if($row['username']==$user && $row['password']==$pass){
 			//header("Location:instructions.html");
 			echo "<script>window.location.replace('instructions.html')</script>";
