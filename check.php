@@ -2,11 +2,12 @@
 <form method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
 Username:<input type="text" name="username" >
 password:<input type="password" name="password">
-<button >click</button>
+<input type="submit" value="submit1"/>
 </form>
 
 <?php
 if($_SERVER["REQUEST_METHOD"]=="POST"){
+
 $username=$_POST["username"];
 $password=$_POST["password"];
 echo $username."and".$password;
