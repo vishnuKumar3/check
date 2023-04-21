@@ -112,10 +112,10 @@ $_SESSION['username']=$user;
 //setcookie("Name",$user);
 //echo $_COOKIE["Name"];
 if(!empty($user) && !empty($pass)){
-	$host="sql6.freemysqlhosting.net";
-	$username="sql6480531";
-	$password="Dsi62kV3KF";
-	$dbname="sql6480531";
+	$host="localhost";
+	$username="root";
+	$password="";
+	$dbname="etest";
 	$conn=new mysqli($host,$username,$password,$dbname);
 	$select="SELECT * FROM passwords";
 	$sql=$conn->query($select);

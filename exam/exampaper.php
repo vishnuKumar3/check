@@ -1,4 +1,5 @@
 <!doctype html>
+<head>
 <?php
 session_start();
 if($_SERVER["REQUEST_METHOD"]=="POST"){
@@ -18,17 +19,22 @@ $result[10]=$_POST['10'];
 $total="";
 for($i=1;$i<=10;$i++){
 		$total=$total."-".$result[$i];}
-$host="sql6.freemysqlhosting.net";
-$username="sql6480531";
-$password="Dsi62kV3KF";
-$dbname="sql6480531";
+$host="localhost";
+$username="root";
+$password="";
+$dbname="etest";
 $conn=new mysqli($host,$username,$password,$dbname);
-$insert=$conn->prepare("INSERT INTO mytable values(?,?)");
-$insert->bind_param("ss",$user,$total);
-$insert->execute();
-$insert->close();
-echo '<script>window.alert("Your exam is over");window.location.replace("examentry.php");</script>';
-die();}
+$res=$conn->query("select result from mytable where username='$user'");
+if($res->num_rows==0){
+	$insert=$conn->prepare("INSERT INTO mytable values(?,?)");
+	$insert->bind_param("ss",$total,$user);
+	$insert->execute();
+	$insert->close();
+	echo "<script>window.alert('exam is over');window.location.replace('examentry.php');</script>";}
+else{
+	echo "<script>window.alert('you already wrote exam');window.location.replace('examentry.php');</script>";
+}
+}
 ?>
 <title>ETest | Exam paper</title>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
@@ -72,7 +78,7 @@ font-family:newfont;
 
 body{padding:0% 2% 2% 2%;}
 </style>
-
+</head>
 
 <body onblur="closefunction()" onmousedown="openFullscreen()" onoffline="offlineFun()" ononline="onlineFun()" >
 
@@ -166,13 +172,13 @@ on.style.display="block";
 window.onload=loadfunction();
 function loadfunction(){
 onlineFun();
-elem.requestFullscreen();
+openFullscreen();
 var group1=["Deepa","Vinaya","Touheed","Suhaanth"];
 var group2=["Priya","Ansh","Aryan"];
 var group3=["Akshay","Kaushik","Venkat","nvk"];
 if(sessionStorage.name==undefined){
 alert("you donot have permission to open this page");
-window.location.replace("/exam/examentry.php");
+window.location.replace("examentry.php");
 }
 else{
 G1=document.getElementById("group1");
@@ -181,11 +187,14 @@ G3=document.getElementById("group3");
 if(group1.includes(sessionStorage.name)){sessionStorage.group="group1";G2.style.display=G3.style.display="none";G1.style.display="block";}
 else if(group2.includes(sessionStorage.name)) {sessionStorage.group="group2";G1.style.display=G3.style.display="none";G2.style.display="block";}
 else if(group3.includes(sessionStorage.name)) {sessionStorage.group="group3";G1.style.display=G2.style.display="none";G3.style.display="block";}
-else{alert("You are not part of Calcitex");window.location.replace("/exam/examentry.php");}
-if(localStorage.examCount2==undefined)
+else{
+	/*alert("You are not part of Calcitex");window.location.replace("/exam/examentry.php");*/
+	sessionStorage.group="group3";G1.style.display=G2.style.display="none";G3.style.display="block";
+}
+/*if(localStorage.examCount2==undefined)
 localStorage.examCount2=1;
 else 
-closefunctionAlready();
+closefunctionAlready();*/
 }
 }
 

@@ -128,25 +128,35 @@ if($_SERVER["REQUEST_METHOD"]=="POST" && isset($_POST['result'])){
 $user=$_POST['user'];
 $pass=$_POST['pass'];
 $_SESSION['username1']=$user;
+$host="localhost";
+$username="root";
+$password="";
+$dbname="etest";
+$conn=new mysqli($host,$username,$password,$dbname);
 //setcookie("Name",$user);
 //echo $_COOKIE["Name"];
-if(!empty($user) && !empty($pass)){
-	$host="sql6.freemysqlhosting.net";
-	$username="sql6480531";
-	$password="Dsi62kV3KF";
-	$dbname="sql6480531";
-	$conn=new mysqli($host,$username,$password,$dbname);
-	$select="SELECT * FROM passwords";
-	$sql=$conn->query($select);
-	while($row=$sql->fetch_assoc()){
-		if($row['username']==$user && $row['password']==$pass){
-			//header("Location:instructions.html");
-			echo "<script>window.location.replace('instructions.html')</script>";
-			die("Login Successful");}}
+$res=$conn->query("select result from mytable where username='$user'");
+echo $res->num_rows;
+if($res->num_rows==0){
+	if(!empty($user) && !empty($pass)){
+
+		$select="SELECT * FROM passwords";
+		$sql=$conn->query($select);
+		while($row=$sql->fetch_assoc()){
+			if($row['username']==$user && $row['password']==$pass){
+				//header("Location:instructions.html");
+				echo "<script>window.location.replace('instructions.html')</script>";
+				die("Login Successful");}}
+		
+		echo '<script>alert("Login unsuccessful");</script>';
+		die();
+		}
 	
-	echo '<script>alert("Login unsuccessful");</script>';
-	die();
-	}}
+	}
+else{
+	echo "<script>window.alert('you already wrote exam');window.location.replace('examentry.php');</script>";
+}
+}
 ?>
 	
 

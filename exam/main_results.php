@@ -1,17 +1,17 @@
 <!doctype html>
-
+<head>
 <?php
 session_start();
-$username=$_SESSION["username"];
-$host="sql6.freemysqlhosting.net";
-$user="sql6480531";
-$pass="Dsi62kV3KF";
-$database="sql6480531";
-$conn=new mysqli($host,$user,$pass,$database);
+$user=$_SESSION["username"];
+$host="localhost";
+$username="root";
+$pass="";
+$database="etest";
+$conn=new mysqli($host,$username,$pass,$database);
 $select="select * from results";
 $rows=$conn->query($select);
 while($row=$rows->fetch_assoc()){
-if($row["username"]==$username){
+if($row["username"]==$user){
 $result=$row["result"];
 }
  
@@ -19,7 +19,7 @@ $result=$row["result"];
 
 ?>
 
-<head>
+
 <title>ETest | results</title>
 <link rel="icon" href="images/logo.png"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
@@ -60,7 +60,7 @@ th,td{border:1px solid black;padding:10px;}
 <th>Result</th>
 </tr>
 <tr>
-<td><?php echo $username; ?></td>
+<td><?php echo $user; ?></td>
 <td><?php echo $result; ?></td>
 </tr>
 </table>
